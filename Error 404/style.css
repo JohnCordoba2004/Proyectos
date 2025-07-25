@@ -1,0 +1,96 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Bitcount Prop Single", system-ui;
+  /* background-color: #f2f2f2; */
+  background-color: #e0f2ff;
+  /* Azul pastel */
+  color: #333;
+  padding: 40px;
+}
+
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.image img {
+  width: 100%;
+  max-width: 400px;
+}
+
+.content {
+  max-width: 500px;
+}
+
+.content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.btn {
+  background-color: #000;
+  color: #fff;
+  padding: 15px 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: background .3s;
+}
+
+btn:hover {
+  background-color: #444;
+}
+
+/* responsive */
+
+@media(max-width: 720px) {
+  .container {
+    flex-direction: column;
+    /* ubica la imagen y el texto uno debajo de otro */
+    text-align: center;
+    /* Centra el texto */
+    padding: 20px;
+  }
+
+  .image img {
+    max-width: 80%;
+    /* Se adapta mejor a dispositivos pequeños*/
+    height: auto;
+    margin: 0 auto;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+  }
+
+  .content p {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 100%;
+    /* lo hace mas facil para pulsar */
+    padding: 12px;
+  }
+
+}
