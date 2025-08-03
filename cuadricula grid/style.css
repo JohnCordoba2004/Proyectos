@@ -1,0 +1,182 @@
+/* Reset Basico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fondo general */
+body {
+  background-color: #1e1e1e;
+  font-family: 'Courier New', monospace;
+  color: #fff;
+  padding: 2rem;
+}
+
+/* Cont principal */
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(1, 1fr));
+  gap: 20px;
+}
+
+/* Seccion card */
+.card {
+  background-color: #2d2d3a;
+  border-radius: 12px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+  /* justify-content: center; */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .2);
+  transition: transform .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* card-large */
+.card-large {
+  grid-column: span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.card-content {
+  max-width: 300px;
+  width: 50%;
+}
+
+.card-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: .5rem;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #cbd5e1;
+  margin-bottom: 2rem;
+}
+
+/* Fin del card-large */
+
+
+/* Estilos al botón */
+.btn {
+  margin-top: 2rem;
+  display: inline-block;
+  background: linear-gradient(270deg, #2563eb, #4f46e5, #2563eb);
+  background-size: 600% 600%;
+  animation: gradientMove 6s ease infinite;
+  color: white;
+  padding: .6rem 1.3rem;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: inherit;
+  overflow: hidden;
+  position: relative;
+  transition: all .3s ease;
+}
+
+.arrow {
+  transform: translateX(-20px);
+  opacity: 0;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+
+.btn:hover .arrow {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  /* Se agranda un poco */
+  background-color: #2563eb;
+}
+
+/* Animaciones para el btn */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Fin animaciones del btn */
+
+/* Fin estilos botón */
+
+/* Estilos a la img */
+.card-img {
+  width: 45%;
+  object-fit: contain;
+}
+
+/* Fin img */
+
+/* Estilos para las otras dos card */
+.card-small {
+  background-color: #2d2d3a;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, .2);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Fin */
+
+/* Estios para el btn de card-small */
+.modern-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.modern-btn:hover {
+  background-color: #5b5bff;
+  box-shadow: 0 0 10px rgba(91, 91, 255, 0.5);
+}
+
+.modern-btn:focus {
+  outline: 1px solid #fff;
+  outline-offset: 2px;
+}
+
+/* Fin btn.card-small */
+
+/* Estilos para el posicionamiento del btn.card-.small */
+.text-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.text-content {
+  max-width: 80%;
+}
+
+/* Fin posicionamiento */
