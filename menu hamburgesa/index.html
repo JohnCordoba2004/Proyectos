@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu Hamburguer</title>
+  <meta name="description" content="Se realizó un menú hamburguesa con desplazamiento lateral desde la izquierda ">
+  <meta name="author" content="JJ">
+  <meta name="copyright" content="NN">
+  <meta name="robots" content="index, nofollow">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+  <header class="main-header">
+    <div class="header-logo">
+      <img src="assets/img/add a kunai in the m.png" alt="Logo" class="logo">
+    </div>
+    <button class="menu-toggle" id="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+  </header>
+
+
+  <!-- Menu lateral -->
+  <nav class="side-menu" id="side-menu">
+    <button class="close-btn" id="close-btn">
+      <i class="fa-solid fa-x"></i>
+    </button>
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Servicios</a></li>
+      <li><a href="#">Proyectos</a></li>
+      <li><a href="#">Contacto</a></li>
+      <li><a href="#">Contacto2</a></li>
+    </ul>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+</body>
+
+<!-- Scripts -->
+<script src="https://kit.fontawesome.com/74de10ced3.js" crossorigin="anonymous"></script>
+<script type="module" src="app.js"></script>
+
+</html>

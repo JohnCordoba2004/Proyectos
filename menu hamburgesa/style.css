@@ -1,0 +1,143 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Main */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4ebdde;
+  padding: 1rem;
+}
+
+/* Botón Hamburguesa */
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+/* Animación Botón  */
+
+
+/* Menu lateral */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translateX(-100%);
+  /* Oculto al inicio */
+  transition: all .3s ease-in-out;
+  width: 250px;
+  height: 100vh;
+  background-color: #111;
+  z-index: 100;
+  padding: 2rem;
+}
+
+.side-menu.open {
+  transform: translateX(0);
+}
+
+.side-menu ul {
+  list-style: none;
+  padding: 0;
+}
+
+.side-menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  position: relative;
+  top: 40px;
+  left: -100%;
+  padding: 1rem 0;
+  opacity: 0;
+  transition: left .9s ease-in-out, opacity 0.4s ease-in-out;
+}
+
+/* Retrasos en cascada */
+/* .side-menu.open li:nth-child(1) a {
+  transition-delay: 0.1s;
+}
+
+.side-menu.open li:nth-child(2) a {
+  transition-delay: 0.3s;
+}
+
+.side-menu.open li:nth-child(3) a {
+  transition-delay: 0.5s;
+}
+
+.side-menu.open li:nth-child(4) a {
+  transition-delay: 0.7s;
+} */
+
+.side-menu.open a {
+  left: 0;
+  opacity: 1;
+}
+
+/* Overlay */
+.overlay {
+  position: fixed;
+  /* se queda fijo al hacer scroll */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* cubre toda el ancho de la ventana */
+  height: 100vh;
+  /* cubre toda la altura de la ventana */
+  opacity: 0;
+  /* fondo oscuro translúcido */
+  z-index: 9;
+  /* asegúrate que esté detrás del menú lateral */
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity 0.3s ease-in-out;
+}
+
+.overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+} 
+
+/* Close Botón */
+.close-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+/* Logo */
+.header-logo {
+  background-color: white;
+  border-radius: 1000%;
+  width: 80px;
+  height: 80px;
+  padding: 2px 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 80px;
+  border-radius: 50%;
+  padding: 2px;
+}
