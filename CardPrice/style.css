@@ -107,7 +107,6 @@ body.dark-mode {
   transition: all 0.3s ease-in-out;
 }
 
-
 .theme-toggle:hover {
   transform: scale(1.1) rotate(15deg);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
