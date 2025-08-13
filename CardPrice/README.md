@@ -174,7 +174,7 @@ Un componente moderno e interactivo de tarjetas de precios construido con HTML, 
 
 ### 🚀 Demo en Vivo
 
-[Ver Demo en Vivo](#) <!-- Agrega tu URL de demo en vivo aquí -->
+<!-- Agrega tu URL de demo en vivo aquí -->
 
 ### 🛠️ Tecnologías Utilizadas
 
