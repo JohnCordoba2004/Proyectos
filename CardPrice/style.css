@@ -42,6 +42,7 @@ body {
   gap: 2rem;
   padding: 2rem;
   align-items: start;
+  transform: translateY(24px);
 }
 
 .card.dark-mode {
@@ -186,7 +187,8 @@ body.dark-mode {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   position: relative;
   overflow: hidden;
-  animation: cardIntro 0.6s ease-out forwards;
+  opacity: 0;
+  /* animation: cardIntro 0.6s ease-out forwards; */
 }
 
 .card.recommended {
@@ -197,14 +199,14 @@ body.dark-mode {
 
 .badge {
   position: absolute;
-  top: 14px;
-  right: -4px;
+  top: 12px;
+  right: 0;
   background: #ff9900;
   color: white;
   padding: 8px 12px;
   opacity: 1;
   font-weight: bold;
-  transform: rotate(20deg);
+  transform: rotate(0deg);
   z-index: 5;
 }
 
@@ -234,12 +236,6 @@ body.dark-mode {
   border-radius: 4px;
   text-align: center;
   margin-bottom: 0.5rem;
-}
-
-.card:hover {
-  transform: scale(1.02);
-  box-shadow: 0 0 12px #ff9900;
-  transition: all 0.3 ease-in-out;
 }
 
 .card:hover .badge {
@@ -344,7 +340,7 @@ body.dark-mode {
 }
 
 /* Animaciones*/
-@keyframes cardIntro {
+/* @keyframes cardIntro {
   0% {
     opacity: 0;
     transform: translateY(40px) scale(0.95);
@@ -354,4 +350,4 @@ body.dark-mode {
     opacity: 1;
     transform: translateY(0) scale(1);
   }
-}
+} */
