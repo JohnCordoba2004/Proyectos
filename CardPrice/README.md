@@ -17,7 +17,7 @@ A modern, interactive pricing cards component built with HTML, CSS, and JavaScri
 
 ### 🚀 Live Demo
 
-[[View Live Demo](https://card-prices-crunchy.netlify.app/) Add your live demo URL here
+[View Live Demo](https://card-prices-crunchy.netlify.app/) Add your live demo URL here
 
 ### 🛠️ Technologies Used
 
