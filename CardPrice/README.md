@@ -1,7 +1,4 @@
 # 🎯 CardPrice - Pricing Cards Component
-
-[English](#english) | [Español](#español)
-
 ---
 
 ## 🇺🇸 English
