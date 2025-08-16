@@ -1,0 +1,534 @@
+/* Reset CSS: elimina márgenes y padding por defecto del navegador */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos generales del body */
+body {
+  font-family: "Poppins", sans-serif;
+  /* Fuente principal */
+  background-color: #fbf2d3;
+  /* Color de fondo crema */
+  min-height: 100vh;
+  /* Altura mínima del viewport */
+  display: flex;
+  /* Layout flexbox */
+  justify-content: center;
+  /* Centra horizontalmente */
+  align-items: center;
+  /* Centra verticalmente */
+  position: fixed;
+  /* Posición fija para evitar scroll */
+  top: 0;
+  left: 0;
+}
+
+/* Estilos de la sección hero */
+.hero {
+  display: block;
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+  /* Tamaño de fuente base */
+}
+
+/* Contenedor principal de información del hero */
+.hero-info {
+  display: inline-flex;
+  /* Layout flexbox inline */
+  align-items: center;
+  /* Centra elementos verticalmente */
+  text-align: center;
+  /* Centra texto */
+  font-size: .9em;
+  /* Tamaño de fuente relativo */
+  min-width: 300px;
+  /* Ancho mínimo */
+  padding: 10px;
+}
+
+/* Contenedor del contenido textual */
+.text-content {
+  min-width: 600px;
+  /* Ancho mínimo para el texto */
+  width: 300px;
+  letter-spacing: 4px;
+  /* Espaciado entre letras */
+  line-height: 2em;
+  /* Altura de línea */
+  color: #111;
+  /* Color del texto */
+  display: flex;
+  flex-direction: column;
+  /* Organiza elementos verticalmente */
+  align-items: center;
+  /* Centra elementos horizontalmente */
+  transform: translateX(30px);
+  /* Mueve el texto hacia la derecha */
+}
+
+/* Estilos del título principal */
+.hero-title {
+  color: #4e342e;
+  /* Color marrón oscuro */
+  font-size: 1rem;
+  margin-bottom: 20px;
+  /* Espacio inferior */
+}
+
+/* Estilos del subtítulo */
+.hero-subtitle {
+  margin-bottom: 20px;
+  color: #ffb347;
+  /* Color naranja */
+}
+
+/* Estilos del botón principal */
+.hero-btn {
+  background-color: #fbf2d3;
+  /* Color de fondo crema */
+  border: 2px solid #FAB818;
+  /* Borde dorado */
+  text-decoration: none;
+  /* Sin subrayado */
+  color: #e85629;
+  /* Color del texto naranja */
+  border-radius: 10px;
+  /* Bordes redondeados */
+  padding: 0.5rem 0.9rem;
+  /* Espaciado interno */
+  text-align: center;
+  margin-top: 1rem;
+  box-shadow: 0 4px 12px #f3bc22e6;
+  /* Sombra dorada */
+  transform: scale(1);
+  /* Escala normal */
+  transition: background 0.3s ease;
+  /* Transición suave */
+}
+
+/* Efecto hover del botón */
+.hero-btn:hover {
+  background-color: #dfd989;
+  /* Color de fondo más oscuro */
+  transform: scale(1.02);
+  /* Escala ligeramente */
+  box-shadow: 0 6px 16px #f3bc22e6;
+  /* Sombra más pronunciada */
+}
+
+/* Efecto active (al hacer clic) del botón */
+.hero-btn:active {
+  transform: scale(0.99);
+  /* Escala ligeramente hacia abajo */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15);
+  /* Sombra interna */
+}
+
+/* Contenedor de la imagen */
+.section-image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  transform: translateX(200px);
+  /* Mueve la imagen hacia la derecha */
+}
+
+/* Estilos de la imagen principal */
+.hero-img {
+  width: 600px;
+  height: 400px;
+}
+
+/* Elemento secreto (easter egg) - pata de perro */
+.paw-secret {
+  position: fixed;
+  /* Posición fija en la pantalla */
+  opacity: 0.1;
+  /* Casi invisible por defecto */
+  /* Posicionamiento fijo en la esquina inferior derecha */
+  bottom: 20px;
+  right: 20px;
+  /* Estilo del icono */
+  font-size: 2rem;
+  /* Tamaño grande */
+  color: #4e342e;
+  /* Color marrón */
+  cursor: pointer;
+  /* Cursor de mano */
+  /* Transición suave */
+  transition: all 0.3s ease;
+  /* Z-index para estar por encima de otros elementos */
+  z-index: 1000;
+}
+
+/* Efecto hover del easter egg */
+.paw-secret:hover {
+  opacity: 0.3;
+  /* Más visible al pasar el mouse */
+  transform: scale(1.1);
+  /* Se agranda ligeramente */
+}
+
+/* Mensaje emergente del easter egg */
+.paw-message {
+  opacity: 0;
+  /* Invisible por defecto */
+  background-color: #edd682;
+  /* Color de fondo amarillo */
+  height: 3em;
+  color: #4e342e;
+  /* Color del texto marrón */
+  transform: scale(0.5);
+  /* Escala pequeña por defecto */
+  /* Posicionamiento fijo para el mensaje emergente */
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  /* Estilos del mensaje */
+  padding: 10px 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* Sombra sutil */
+  /* Z-index para estar por encima de otros elementos */
+  z-index: 1001;
+  /* Transición suave */
+  transition: all 0.3s ease;
+  /* Ancho fijo para mejor legibilidad */
+  width: 200px;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+
+/* Responsive Design - Diseño Adaptativo */
+
+/* Breakpoint para tablets grandes (máximo 1024px) */
+@media screen and (max-width: 1024px) {
+  .hero-info {
+    /* Cambia la dirección del flexbox de horizontal a vertical */
+    flex-direction: column;
+    /* Centra los elementos horizontalmente */
+    align-items: center;
+    /* Centra los elementos verticalmente */
+    justify-content: center;
+    /* Ajusta el ancho al 90% del viewport para dejar márgenes */
+    width: 90vw;
+    /* Mantiene la altura mínima del viewport */
+    min-height: 100vh;
+    /* Añade padding para separación del borde */
+    padding: 20px;
+  }
+
+  .text-content {
+    /* Reduce el ancho mínimo para tablets */
+    min-width: 500px;
+    /* Centra el texto */
+    text-align: center;
+    /* Elimina la transformación horizontal */
+    transform: translateX(0);
+    /* Ajusta la posición para mejor centrado */
+    margin-bottom: 30px;
+  }
+
+  .section-image {
+    /* Centra la imagen */
+    justify-content: center;
+    /* Cambia a dirección horizontal para mejor distribución */
+    flex-direction: row;
+    /* Reduce la transformación horizontal */
+    transform: translateX(50px);
+  }
+
+  .hero-img {
+    /* Reduce el tamaño de la imagen para tablets */
+    width: 500px;
+    height: 350px;
+  }
+}
+
+/* Breakpoint para tablets medianas (máximo 768px) */
+@media screen and (max-width: 768px) {
+  .hero {
+    /* Mantiene el display block para layout vertical */
+    display: block;
+    /* Añade padding para mejor espaciado */
+    padding: 15px;
+  }
+
+  .hero-info {
+    /* Ajusta el ancho al 95% del viewport */
+    width: 95vw;
+    /* Reduce el padding para aprovechar mejor el espacio */
+    padding: 15px;
+    /* Añade gap entre elementos */
+    gap: 20px;
+  }
+
+  .text-content {
+    /* Reduce el ancho mínimo para tablets medianas */
+    min-width: 400px;
+    /* Ajusta el ancho al 100% del contenedor */
+    width: 100%;
+    /* Reduce la altura mínima */
+    min-height: 300px;
+    /* Centra perfectamente el contenido */
+    align-items: center;
+    justify-content: center;
+    /* Elimina transformaciones para centrado natural */
+    transform: none;
+    /* Ajusta la posición */
+    position: relative;
+    top: 0;
+    left: 0;
+    /* Añade margen inferior para separación */
+    margin-bottom: 20px;
+  }
+
+  .section-image {
+    /* Centra la imagen perfectamente */
+    align-items: center;
+    justify-content: center;
+    /* Mantiene dirección horizontal */
+    flex-direction: row;
+    /* Ajusta la altura mínima */
+    min-height: 250px;
+    /* Elimina padding y margin innecesarios */
+    padding: 0;
+    margin: 0;
+    /* Cambia a posición relativa para mejor flujo */
+    position: relative;
+    /* Ajusta la transformación vertical */
+    transform: translateY(0);
+    /* Mantiene la proporción de aspecto */
+    aspect-ratio: 16/9;
+  }
+
+  .hero-img {
+    /* Ajusta el tamaño para tablets medianas */
+    width: 400px;
+    height: 280px;
+    /* Mantiene la proporción de la imagen */
+    object-fit: contain;
+  }
+
+  .paw-secret {
+    /* Mantiene posición fija pero ajusta para tablets */
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    /* Ajusta el tamaño para tablets */
+    font-size: 1.8rem;
+    /* Aumenta la opacidad para mejor visibilidad */
+    opacity: 0.2;
+  }
+
+  .paw-message {
+    /* Mantiene posición fija pero ajusta para tablets */
+    position: fixed;
+    bottom: 70px;
+    right: 15px;
+    /* Ajusta el ancho para tablets */
+    width: 250px;
+    /* Ajusta el padding */
+    padding: 12px 18px;
+    /* Ajusta el tamaño de fuente */
+    font-size: 1rem;
+  }
+}
+
+/* Breakpoint para móviles grandes (máximo 480px) */
+@media screen and (max-width: 480px) {
+  .hero {
+    /* Ajusta el padding para móviles */
+    padding: 10px;
+    /* Reduce el tamaño de fuente para móviles */
+    font-size: 18px;
+  }
+
+  .hero-info {
+    /* Usa todo el ancho disponible */
+    width: 100vw;
+    /* Reduce el padding para móviles */
+    padding: 10px;
+    /* Reduce el gap entre elementos */
+    gap: 15px;
+  }
+
+  .text-content {
+    /* Ajusta el ancho mínimo para móviles */
+    min-width: 300px;
+    /* Reduce la altura mínima */
+    min-height: 250px;
+    /* Reduce el espaciado entre letras para móviles */
+    letter-spacing: 2px;
+    /* Ajusta la altura de línea */
+    line-height: 1.6em;
+    /* Añade margen inferior */
+    margin-bottom: 15px;
+  }
+
+  .hero-title {
+    /* Reduce el tamaño de fuente para móviles */
+    font-size: 0.9rem;
+    /* Reduce el margen inferior */
+    margin-bottom: 15px;
+  }
+
+  .hero-subtitle {
+    /* Reduce el margen inferior */
+    margin-bottom: 15px;
+  }
+
+  .hero-btn {
+    /* Ajusta el padding para móviles */
+    padding: 0.4rem 0.8rem;
+    /* Reduce el margen superior */
+    margin-top: 0.8rem;
+    /* Reduce el tamaño de fuente */
+    font-size: 0.9em;
+  }
+
+  .section-image {
+    /* Ajusta la altura mínima para móviles */
+    min-height: 200px;
+  }
+
+  .hero-img {
+    /* Ajusta el tamaño para móviles */
+    width: 300px;
+    height: 200px;
+  }
+
+  .paw-secret {
+    /* Ajusta la posición para móviles */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    /* Reduce el tamaño para móviles */
+    font-size: 1.5rem;
+    /* Ajusta la opacidad */
+    opacity: 0.25;
+  }
+
+  .paw-message {
+    /* Ajusta la posición para móviles */
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    /* Ajusta el ancho para móviles */
+    width: 220px;
+    /* Reduce la altura */
+    height: 2.5em;
+    /* Ajusta el tamaño de fuente */
+    font-size: 0.9em;
+    /* Ajusta el padding */
+    padding: 8px 12px;
+  }
+}
+
+/* Breakpoint para móviles pequeños (máximo 320px) */
+@media screen and (max-width: 320px) {
+  .hero {
+    /* Reduce aún más el padding */
+    padding: 5px;
+    /* Reduce el tamaño de fuente */
+    font-size: 16px;
+  }
+
+  .text-content {
+    /* Ajusta el ancho mínimo para móviles muy pequeños */
+    min-width: 250px;
+    /* Reduce la altura mínima */
+    min-height: 200px;
+    /* Reduce el espaciado entre letras */
+    letter-spacing: 1px;
+    /* Ajusta la altura de línea */
+    line-height: 1.4em;
+  }
+
+  .hero-img {
+    /* Ajusta el tamaño para móviles muy pequeños */
+    width: 250px;
+    height: 170px;
+  }
+
+  .paw-secret {
+    /* Ajusta la posición para móviles muy pequeños */
+    position: fixed;
+    bottom: 8px;
+    right: 8px;
+    /* Reduce el tamaño para móviles muy pequeños */
+    font-size: 1.3rem;
+  }
+
+  .paw-message {
+    /* Ajusta la posición para móviles muy pequeños */
+    position: fixed;
+    bottom: 50px;
+    right: 8px;
+    /* Ajusta el ancho para móviles muy pequeños */
+    width: 180px;
+    /* Reduce la altura */
+    height: 2em;
+    /* Ajusta el padding */
+    padding: 6px 10px;
+    /* Reduce el tamaño de fuente */
+    font-size: 0.8em;
+  }
+}
+
+/* Orientación landscape en móviles */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .hero-info {
+    /* Ajusta la altura mínima para orientación horizontal */
+    min-height: 100vh;
+    /* Cambia la dirección a horizontal para aprovechar el ancho */
+    flex-direction: row;
+    /* Ajusta el gap */
+    gap: 15px;
+  }
+
+  .text-content {
+    /* Reduce la altura mínima */
+    min-height: 200px;
+    /* Ajusta el ancho */
+    min-width: 300px;
+  }
+
+  .section-image {
+    /* Ajusta la altura mínima */
+    min-height: 150px;
+  }
+
+  .hero-img {
+    /* Ajusta el tamaño para orientación horizontal */
+    width: 250px;
+    height: 180px;
+  }
+
+  .paw-secret {
+    /* Ajusta la posición para orientación horizontal */
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    /* Ajusta el tamaño */
+    font-size: 1.5rem;
+  }
+
+  .paw-message {
+    /* Ajusta la posición para orientación horizontal */
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    /* Ajusta el ancho */
+    width: 200px;
+    /* Ajusta el padding */
+    padding: 8px 12px;
+  }
+}
+
