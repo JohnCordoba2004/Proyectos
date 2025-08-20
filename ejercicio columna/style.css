@@ -1,9 +1,11 @@
+/* Reset básico: modelo de caja, márgenes y padding */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
+/* Centra el contenido y define tipografía y fondo */
 body {
   display: flex;
   align-items: center;
@@ -16,6 +18,7 @@ body {
 }
 
 
+/* Contenedor de dos columnas */
 .container {
   display: flex;
   align-items: center;
@@ -23,6 +26,7 @@ body {
   gap: 20px;
 }
 
+/* Columna de la imagen */
 .image-section {
   display: flex;
   align-items: center;
@@ -30,6 +34,7 @@ body {
   height: 50vh;
 }
 
+/* Imagen responsiva que cubre el alto definido */
 .image-section img {
   overflow: hidden;
   object-fit: cover;
@@ -38,6 +43,7 @@ body {
 }
 
 
+/* Columna de texto con sombra y fondo claro */
 .text-section {
   display: flex;
   align-items: center;
@@ -50,6 +56,7 @@ body {
   box-shadow: 0 4px 8px rgba(100, 100, 50, .6);
 }
 
+/* Título principal */
 .text-section h1 {
   font-size: 1.3rem;
   color: #333;
@@ -57,6 +64,7 @@ body {
 }
 
 
+/* Párrafo descriptivo */
 .text-section p {
   text-align: center;
   font-size: 1rem;
@@ -64,6 +72,7 @@ body {
   font-weight: lighter;
 }
 
+/* Botón de llamada a la acción */
 .btn {
   text-decoration: none;
   color: #ffffff;
@@ -74,10 +83,12 @@ body {
   transition: background .3s ease;
 }
 
+/* Efecto hover del botón */
 .btn:hover {
   background-color: #33aef0;
 }
 
+/* En pantallas pequeñas, apila las columnas y ajusta ancho */
 @media (max-width: 768px) {
   .container {
     flex-direction: column;

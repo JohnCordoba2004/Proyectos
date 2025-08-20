@@ -1,9 +1,11 @@
+/* Reset básico */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Centrado vertical y horizontal del contenedor */
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   background-color: #FFB6C1;
@@ -13,6 +15,7 @@ body {
   justify-content: center;
 }
 
+/* Caja principal de la tarjeta */
 .card {
   width: 400px;
   border-radius: 10px;
@@ -23,25 +26,30 @@ body {
   text-align: center;
 }
 
+/* Imagen de la tarjeta */
 .card img {
   width: 80%;
   height: auto;
 }
 
+/* Espaciado interno del contenido */
 .card-content {
   padding: 20px;
 }
 
+/* Título de la persona */
 .card-content h1 {
   font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
+/* Descripción breve */
 .card-content p {
   font-size: 1rem;
   margin-bottom: 30px;
 }
 
+/* Botón de acción */
 .btn {
   background-color: black;
   color: white;
@@ -49,9 +57,10 @@ body {
   padding: 10px 30px;
   border-radius: 20px;
   box-shadow: 0 5px 20px rgba(243, 178, 15, 0.7);
-  transition: background .3 ease;
+  transition: background .3s ease;
 }
 
+/* Efecto hover del botón */
 .btn:hover {
   background-color: #0056b3;
 }

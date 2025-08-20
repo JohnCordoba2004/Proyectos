@@ -1,12 +1,14 @@
-/* Fonts */
+/* Importa la fuente para los textos de la página de error */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap');
 
+/* Reset básico para que todos los elementos comiencen en cero */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estilos globales del body: tipografía, fondo y color base */
 body {
   font-family: "Bitcount Prop Single", system-ui;
   background-color: #f2f2f2;
@@ -14,10 +16,12 @@ body {
   padding: 40px;
 }
 
+/* Subtítulo superior "404 not found" alineado a la izquierda */
 h2 {
   text-align: start;
 }
 
+/* Contenedor principal: layout flexible y centrado con ancho máximo */
 .container {
   display: flex;
   align-items: center;
@@ -28,26 +32,31 @@ h2 {
   margin: 0 auto;
 }
 
+/* Imagen responsiva con ancho máximo controlado */
 .image img {
   width: 100%;
   max-width: 400px;
 }
 
+/* Contenedor del texto principal */
 .content {
   max-width: 500px;
 }
 
+/* Título grande del mensaje de error */
 .content h1 {
   font-size: 2.8rem;
   margin-bottom: 20px;
 }
 
+/* Párrafo descriptivo del error */
 .content p {
   font-size: 1.2rem;
   line-height: 1.6;
   margin-bottom: 30px;
 }
 
+/* Botón para volver al inicio */
 .btn {
   background-color: #000;
   color: #fff;
@@ -58,12 +67,12 @@ h2 {
   transition: background .3s;
 }
 
-btn:hover {
+/* Efecto hover del botón (corregido el selector con punto) */
+.btn:hover {
   background-color: #444;
 }
 
-/* responsive */
-
+/* Responsive: apila contenido y centra textos en pantallas pequeñas */
 @media(max-width: 720px) {
   .container {
     flex-direction: column;

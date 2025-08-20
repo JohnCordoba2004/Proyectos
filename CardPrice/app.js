@@ -1,18 +1,20 @@
-const btnDarkMode = document.getElementById("btn-toggle");
-const cards = document.querySelectorAll(".card");
-const changeCard = document.getElementById("cards");
-const badge = document.getElementById("badge");
-const trial = document.querySelectorAll(".card-trial");
-const cardPrice = document.querySelectorAll(".card-price");
-const toggle = document.getElementById("btn-toggle");
+// Referencias a elementos del DOM
+const btnDarkMode = document.getElementById("btn-toggle"); // Botón de tema
+const cards = document.querySelectorAll(".card"); // Todas las tarjetas de planes
+const changeCard = document.getElementById("cards"); // Contenedor de tarjetas
+const badge = document.getElementById("badge"); // Insignia de recomendado
+const trial = document.querySelectorAll(".card-trial"); // Botones de prueba
+const cardPrice = document.querySelectorAll(".card-price"); // Precios
+const toggle = document.getElementById("btn-toggle"); // Botón de tema (duplicado por ID para estilos)
 
-/* 💾 Leer estado al cargar */
+/* 💾 Leer estado al cargar: recupera selección de plan y tema */
 const planGuardado = localStorage.getItem("planSeleccionado");
 if (planGuardado) {
   const card = document.querySelector(`[data-plan-id="${planGuardado}"]`);
   if (card) card.classList.add("is-selected");
 }
 
+// Si el usuario dejó el sitio en modo oscuro, lo restauramos
 const temaGuardado = localStorage.getItem("modoTema");
 if (temaGuardado === "oscuro") {
   document.body.classList.add("dark-mode");
@@ -24,7 +26,7 @@ if (temaGuardado === "oscuro") {
   toggle.classList.add("dark-mode");
 }
 
-/* 🎯 Guardar tema cuando el usuario cambia */
+/* 🎯 Cambiar y guardar tema cuando el usuario hace clic */
 btnDarkMode.addEventListener("click", () => {
   const isDark = document.body.classList.toggle("dark-mode");
   badge.classList.toggle("dark-mode");
@@ -34,28 +36,27 @@ btnDarkMode.addEventListener("click", () => {
   changeCard.classList.toggle("dark-mode");
   toggle.classList.toggle("dark-mode");
 
+  // Persistimos la preferencia
   localStorage.setItem("modoTema", isDark ? "oscuro" : "claro");
 });
 
-/* ✨ Detectar selección de plan */
+/* ✨ Detectar selección de plan y guardarla */
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    // Sacar clase a todas
+    // Quita selección previa
     cards.forEach((c) => c.classList.remove("is-selected"));
-    // Agregar a la seleccionada
+    // Marca como seleccionada la tarjeta clickeada
     card.classList.add("is-selected");
 
     const planId = card.dataset.planId;
     localStorage.setItem("planSeleccionado", planId);
 
-    // Tip: llama la animacion
+    // Muestra animación en la insignia
     animateBadge(card);
-    // y persistí en localStorage como ya hiciste
   });
 });
 
-/* GSAP */
-/* Animacion de las card */
+/* GSAP: animación de entrada de las tarjetas al cargar */
 window.addEventListener("DOMContentLoaded", () => {
   gsap.to(".card", {
     opacity: 1,
@@ -66,7 +67,7 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-/* Badge */
+/* Animación de la insignia dentro de la tarjeta seleccionada */
 function animateBadge(card) {
   const b = card.querySelector(".badge");
   if (!b) return;
@@ -84,7 +85,7 @@ function animateBadge(card) {
   );
 }
 
-/* Animacion de la card, lo buscamos con un forEach y aplicamos la animacion a cada tarjeta */
+/* Efecto hover con GSAP para dar feedback visual */
 cards.forEach((card) => {
   let hoverTween = gsap.to(card, {
     scale: 1.02,
@@ -98,7 +99,7 @@ cards.forEach((card) => {
   card.addEventListener("mouseleave", () => hoverTween.reverse());
 });
 
-/* Guarda la seleccion del badge en el localStorage */
+/* Al volver a la página, restaura la tarjeta seleccionada y anima su badge */
 const plan = localStorage.getItem("planSeleccionado");
 if (plan) {
   const selected = document.querySelector(`[data-plan-id = "${plan}"]`);

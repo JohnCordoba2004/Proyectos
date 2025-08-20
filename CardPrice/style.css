@@ -1,13 +1,14 @@
+/* Importa la familia tipográfica Montserrat */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-/* Reset */
+/* Reset: quita padding/margen por defecto y usa border-box */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-/* 🌐 Layout general */
+/* 🌐 Layout general del documento */
 body {
   font-family: "Montserrat", sans-serif;
   background-color: #fff;
@@ -16,7 +17,7 @@ body {
 }
 
 
-/* Contenedor Principal */
+/* Contenedor Principal de la página */
 .container {
   display: flex;
   flex-direction: column;
@@ -25,7 +26,7 @@ body {
   width: 100%;
 }
 
-/* Titulo principal */
+/* Título principal y subtítulo */
 .principal-text-content {
   width: 100%;
   text-align: center;
@@ -34,7 +35,7 @@ body {
   width: 100%;
 }
 
-/* Grid de tarjetas */
+/* Grid que contiene las tarjetas de planes */
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(360px, 2fr));
@@ -45,6 +46,7 @@ body {
   transform: translateY(24px);
 }
 
+/* Variantes de modo oscuro de tarjetas y contenedores */
 .card.dark-mode {
   background: rgba(30, 30, 30, 0.7);
   backdrop-filter: blur(8px);
@@ -83,6 +85,7 @@ body.dark-mode {
   transition: background .3s ease;
 }
 
+/* Botón flotante para alternar el tema */
 .theme-toggle {
   position: fixed;
   top: 20px;
@@ -103,6 +106,7 @@ body.dark-mode {
   overflow: hidden;
 }
 
+/* Icono del botón (sol/luna) */
 .theme-toggle::before {
   content: '☀️';
   transition: all 0.3s ease-in-out;
@@ -123,7 +127,7 @@ body.dark-mode {
   box-shadow: 0 0 0 3px rgba(255, 215, 0, 0.3), 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Modo oscuro */
+/* Apariencia del botón en modo oscuro */
 .theme-toggle.dark-mode {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   border-color: #f39c12;
@@ -174,7 +178,7 @@ body.dark-mode {
   }
 }
 
-/* Tarjeta individual */
+/* Tarjeta individual: caja visual de cada plan */
 .card {
   background-color: #fff;
   border: 4px solid #f8f8f8;
@@ -191,12 +195,14 @@ body.dark-mode {
   /* animation: cardIntro 0.6s ease-out forwards; */
 }
 
+/* Card recomendada: resalta con borde/sombra dorada */
 .card.recommended {
   box-shadow: 0 0 16px #FAB818;
   border: 4px solid #FAB818;
   transition: all 0.3s ease-in-out;
 }
 
+/* Insignia superior (Recomendado) */
 .badge {
   position: absolute;
   top: 12px;
@@ -211,7 +217,7 @@ body.dark-mode {
 }
 
 
-/* Icono de la card */
+/* Icono circular de cada plan */
 .card-icon {
   width: 80px;
   height: 80px;
@@ -226,7 +232,7 @@ body.dark-mode {
   margin-bottom: 1rem;
 }
 
-/* Precios de la card */
+/* Caja que muestra el precio del plan */
 .card-price {
   font-size: 1.1rem;
   font-weight: 500;
@@ -244,7 +250,7 @@ body.dark-mode {
 
 /* Fin */
 
-/* Tetxo adicional */
+/* Texto auxiliar: impuestos y notas */
 .tax,
 .fan {
   font-weight: 400;
@@ -254,7 +260,7 @@ body.dark-mode {
   color: #777;
 }
 
-/* Descuento anual */
+/* Mensaje de descuento anual */
 .discount-text {
   color: #FAB818;
   font-weight: bold;
@@ -264,13 +270,14 @@ body.dark-mode {
   transform: translateY(-20px);
 }
 
-/* Card info */
+/* Contenedor para listas de beneficios */
 .card-info-list {
   display: flex;
   justify-content: center;
   padding: 1rem 0;
 }
 
+/* Lista de beneficios sin viñetas, con espaciado */
 .card-list {
   list-style: none;
   padding: 0;
@@ -281,6 +288,7 @@ body.dark-mode {
   letter-spacing: 1px;
 }
 
+/* Cada ítem de beneficio con icono a la izquierda */
 .card-list li {
   display: flex;
   align-items: center;
@@ -288,12 +296,12 @@ body.dark-mode {
   margin-bottom: 0.5rem;
 }
 
-/* icono check */
+/* Color destacado para el icono de check */
 .fa-check {
   color: #FAB818 !important;
 }
 
-/* Trial */
+/* Botón de prueba gratis (CTA) */
 .card-trial {
   background-color: #fff;
   border: 2px solid #FAB818;
@@ -326,7 +334,7 @@ body.dark-mode {
 
 /* Fin */
 
-/* Responsividad */
+/* Responsividad: ajustes en tamaños medianos */
 @media(max-width: 768px) {
   .card {
     min-height: auto;

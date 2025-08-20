@@ -1,11 +1,11 @@
-/* Reset Basico */
+/* Reset básico: quita márgenes/padding por defecto y usa border-box */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Fondo general */
+/* Fondo general y tipografía */
 body {
   background-color: #1e1e1e;
   font-family: 'Courier New', monospace;
@@ -13,14 +13,14 @@ body {
   padding: 2rem;
 }
 
-/* Cont principal */
+/* Contenedor principal de la grilla tipo "bento" */
 .bento-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(1, 1fr));
   gap: 20px;
 }
 
-/* Seccion card */
+/* Tarjeta base: contenedor con sombra y transición */
 .card {
   background-color: #2d2d3a;
   border-radius: 12px;
@@ -36,7 +36,7 @@ body {
   transform: translateY(-5px);
 }
 
-/* card-large */
+/* Variante grande: ocupa dos columnas y distribuye el contenido */
 .card-large {
   grid-column: span 2;
   display: flex;
@@ -46,16 +46,19 @@ body {
   gap: 1rem;
 }
 
+/* Columna de texto dentro de la card grande */
 .card-content {
   max-width: 300px;
   width: 50%;
 }
 
+/* Título de la tarjeta */
 .card-content h2 {
   font-size: 1.8rem;
   margin-bottom: .5rem;
 }
 
+/* Descripción de la tarjeta */
 .card-content p {
   font-size: 1rem;
   color: #cbd5e1;
@@ -65,7 +68,7 @@ body {
 /* Fin del card-large */
 
 
-/* Estilos al botón */
+/* Botón con gradiente animado */
 .btn {
   margin-top: 2rem;
   display: inline-block;
@@ -83,6 +86,7 @@ body {
   transition: all .3s ease;
 }
 
+/* Flecha oculta que aparece con hover */
 .arrow {
   transform: translateX(-20px);
   opacity: 0;
@@ -90,18 +94,20 @@ body {
   margin-left: 10px;
 }
 
+/* Muestra la flecha al pasar el mouse */
 .btn:hover .arrow {
   transform: translateX(0);
   opacity: 1;
 }
 
+/* Efecto de agrandar el botón al hacer hover */
 .btn:hover {
   transform: scale(1.05);
   /* Se agranda un poco */
   background-color: #2563eb;
 }
 
-/* Animaciones para el btn */
+/* Animación del gradiente de fondo */
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%;
@@ -120,7 +126,7 @@ body {
 
 /* Fin estilos botón */
 
-/* Estilos a la img */
+/* Columna de imagen dentro de la card grande */
 .card-img {
   width: 45%;
   object-fit: contain;
@@ -128,7 +134,7 @@ body {
 
 /* Fin img */
 
-/* Estilos para las otras dos card */
+/* Tarjetas pequeñas: estilo y centrado de contenido */
 .card-small {
   background-color: #2d2d3a;
   border-radius: 12px;
@@ -141,7 +147,7 @@ body {
 
 /* Fin */
 
-/* Estios para el btn de card-small */
+/* Botón circular minimalista dentro de tarjetas pequeñas */
 .modern-btn {
   display: inline-flex;
   align-items: center;
@@ -155,11 +161,13 @@ body {
   margin-top: 0.5rem;
 }
 
+/* Resalta el botón con color y sombra */
 .modern-btn:hover {
   background-color: #5b5bff;
   box-shadow: 0 0 10px rgba(91, 91, 255, 0.5);
 }
 
+/* Accesibilidad: contorno visible al enfocar */
 .modern-btn:focus {
   outline: 1px solid #fff;
   outline-offset: 2px;
@@ -167,7 +175,7 @@ body {
 
 /* Fin btn.card-small */
 
-/* Estilos para el posicionamiento del btn.card-.small */
+/* Distribuye texto y botón en un solo renglón */
 .text-group {
   display: flex;
   justify-content: space-between;
@@ -175,6 +183,7 @@ body {
   margin-top: 20px;
 }
 
+/* Limita el ancho del bloque de texto */
 .text-content {
   max-width: 80%;
 }

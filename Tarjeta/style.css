@@ -1,9 +1,11 @@
+/* Reset básico de estilos */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Centrado del contenedor principal */
 body {
   font-family: 'Courier New', Courier, monospace;
   background-color: #f2f2f2;
@@ -13,6 +15,7 @@ body {
   height: 100vh;
 }
 
+/* Caja de la tarjeta con sombra ligera */
 .card {
   background-color: white;
   border-radius: 10px;
@@ -22,34 +25,40 @@ body {
   text-align: center;
 }
 
+/* Imagen superior de la tarjeta */
 .card img {
   width: 100%;
   height: auto;
 }
 
+/* Sección de contenido textual */
 .card-content {
   padding: 20px;
 }
 
+/* Nombre destacado */
 .card-content h1 {
   font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
+/* Descripción breve */
 .card-content p {
   font-size: 1rem;
   margin-bottom: 20px;
 }
 
+/* Botón de acción */
 .btn {
   background-color: #007bff;
   color: white;
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 6px;
-  transition: background .3 ease;
+  transition: background .3s ease;
 }
 
+/* Efecto hover del botón */
 .btn:hover {
   background-color: #0056b3;
 }

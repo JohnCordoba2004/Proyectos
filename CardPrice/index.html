@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
+  <!-- Metadatos básicos y viewport responsive -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Título de la página -->
   <title>Card Price</title>
+  <!-- Enlace a los estilos principales -->
   <link rel="stylesheet" href="style.css">
+  <!-- Fin head -->
 </head>
 
 <body>
@@ -21,6 +25,7 @@
         <div class="card-icon">
           <i class="fa-solid fa-user"></i>
         </div>
+        <!-- Precio del plan -->
         <div class="card-price" id="price">$7.99/mes <span class="tax">+ tax</span></div>
         <div class="discount-text">Ahorra 20% con el plan anual</div>
 
@@ -41,6 +46,7 @@
 
       <!-- 🚀 Tarjeta Premium -->
       <div class="card recommended" data-plan-id="mega-fan">
+        <!-- Insignia que destaca el plan recomendado -->
         <div class="badge" id="badge" data-plan-id="badge">⭐ Recomendado</div>
         <div class="card-icon">
           <i class="fa-solid fa-rocket"></i>
@@ -89,12 +95,16 @@
       </div>
     </div>
 
+    <!-- Botón flotante para alternar entre tema claro/oscuro -->
     <button class="theme-toggle" id="btn-toggle"></button>
   </div>
 
   <!-- scripts -->
+  <!-- Librería de animaciones GSAP -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <!-- Iconos de FontAwesome -->
   <script src="https://kit.fontawesome.com/74de10ced3.js" crossorigin="anonymous"></script>
+  <!-- Lógica de tema y selección de plan -->
   <script src="app.js"></script>
 </body>
 

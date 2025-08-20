@@ -1,16 +1,18 @@
+/* Reset básico: padding/margen a cero y box-sizing consistente */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
+/* Tipografía base */
 body {
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   margin: 0;
   padding: 0;
 }
 
-/* Main */
+/* Encabezado principal */
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -27,10 +29,10 @@ body {
   cursor: pointer;
 }
 
-/* Animación Botón  */
+/* Animación Botón (placeholder) */
 
 
-/* Menu lateral */
+/* Menu lateral (panel que entra desde la izquierda) */
 .side-menu {
   position: fixed;
   top: 0;
@@ -66,7 +68,7 @@ body {
   transition: left .9s ease-in-out, opacity 0.4s ease-in-out;
 }
 
-/* Retrasos en cascada */
+/* Retrasos en cascada (alternativa en CSS si se quisiera) */
 /* .side-menu.open li:nth-child(1) a {
   transition-delay: 0.1s;
 }
@@ -88,7 +90,7 @@ body {
   opacity: 1;
 }
 
-/* Overlay */
+/* Overlay: capa oscura que se muestra cuando el menú está abierto */
 .overlay {
   position: fixed;
   /* se queda fijo al hacer scroll */
@@ -112,7 +114,7 @@ body {
   pointer-events: auto;
 } 
 
-/* Close Botón */
+/* Botón para cerrar el menú */
 .close-btn {
   background: none;
   border: none;
@@ -124,7 +126,7 @@ body {
   cursor: pointer;
 }
 
-/* Logo */
+/* Logo dentro del header */
 .header-logo {
   background-color: white;
   border-radius: 1000%;
